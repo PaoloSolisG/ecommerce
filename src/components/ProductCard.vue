@@ -437,6 +437,115 @@ const onWholesaleConfirm = (data) => {
 @media (max-width: 480px) {
     .product-card {
         max-width: 184px;
+        border-radius: 10px;
+    }
+
+    .wishlist-btn {
+        top: 6px;
+        right: 6px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+
+    .image-box {
+        height: 120px;
+        padding: 10px;
+    }
+
+    .info-box {
+        padding: 8px;
+    }
+
+    .meta-row {
+        margin-bottom: 3px;
+    }
+
+    .brand {
+        font-size: 0.6rem;
+    }
+
+    .code {
+        font-size: 0.55rem;
+    }
+
+    .btn-wholesale-tag {
+        font-size: 0.5rem;
+        padding: 2px 5px;
+        border-radius: 4px;
+    }
+
+    .btn-wholesale-tag i {
+        font-size: 0.5rem;
+        margin-left: 2px;
+    }
+
+    .product-name {
+        font-size: 0.75rem;
+        height: 32px;
+        margin-bottom: 6px;
+    }
+
+    .variants-row {
+        gap: 6px;
+        margin-bottom: 8px;
+        height: 14px;
+    }
+
+    .color-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .size-badge {
+        font-size: 0.5rem;
+        padding: 1px 4px;
+        border-radius: 3px;
+    }
+
+    .price-row {
+        gap: 3px;
+        margin-bottom: 8px;
+    }
+
+    .main-price {
+        font-size: 0.95rem;
+    }
+
+    .main-price .symbol {
+        font-size: 0.65rem;
+    }
+
+    .unit {
+        font-size: 0.6rem;
+    }
+
+    .qty-selector {
+        margin-bottom: 8px;
+        padding: 2px;
+        border-radius: 6px;
+    }
+
+    .qty-nav {
+        width: 24px;
+        height: 24px;
+        font-size: 0.65rem;
+        border-radius: 5px;
+    }
+
+    .qty-input {
+        width: 32px;
+        font-size: 0.75rem;
+    }
+
+    .action-btn {
+        padding: 8px;
+        border-radius: 6px;
+        font-size: 0.65rem;
+    }
+
+    .action-btn i {
+        font-size: 0.6rem;
     }
 }
 </style>
