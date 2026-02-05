@@ -46,7 +46,7 @@ defineProps({
 /* Estilo Base (Desktop) */
 .banner-img {
     width: 100%;
-    height: 550px;
+    /* height: 550px; */
     object-fit: cover;
     /* Recorta la imagen para llenar el espacio sin deformar */
     object-position: center;
@@ -63,7 +63,7 @@ defineProps({
 /* Ajustes para Móviles (Smartphone) */
 @media (max-width: 768px) {
     .banner-img {
-        height: 400px;
+       
         /* Un poco más de aire para que luzca la imagen vertical */
         object-fit: fill;
         /* Si la imagen móvil ya viene diseñada a medida, usamos fill o cover */
