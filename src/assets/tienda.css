@@ -1,0 +1,564 @@
+/* ============================================================================
+   TIENDA.CSS - SISTEMA DE ESTILOS RESPONSIVE
+   ============================================================================ */
+
+/* ============================================================================
+   1. RESET Y BASE GLOBAL
+   ============================================================================ */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  background: #fdfdfd;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================================================================
+   2. HEADER - BARRA SUPERIOR
+   ============================================================================ */
+.header-top {
+  background: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Logo */
+.logo-wrapper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  max-height: 45px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* Buscador del Header */
+.search-bar {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 5px 15px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+}
+
+.search-bar:focus-within {
+  background: #ffffff;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.search-btn {
+  border: none;
+  background: transparent;
+  color: #64748b;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+/* ============================================================================
+   3. ICONOS Y BOTONES DEL HEADER
+   ============================================================================ */
+.cart-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  background: #f8fafc;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  position: relative;
+  color: #334155;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.icon-btn:hover {
+  background: #e2e8f0;
+  color: #0d6efd;
+}
+
+.icon-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 20px;
+  border: 2px solid white;
+  font-weight: 600;
+}
+
+.icon-btn-user {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 12px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.icon-btn-user:hover {
+  background: #0b5ed7;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+.user-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+/* ============================================================================
+   4. BUSCADOR DINÁMICO (PÁGINA PRINCIPAL)
+   ============================================================================ */
+.search-box-dynamic {
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.search-box-dynamic:focus-within {
+  border-color: #0d6efd;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.search-box-dynamic input {
+  border: none;
+  padding: 12px 15px;
+  outline: none;
+  width: 100%;
+  font-size: 0.95rem;
+  background: transparent;
+}
+
+/* Botón de Regreso */
+.btn-back-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.btn-back-circle:hover {
+  background: #0d6efd;
+  transform: scale(1.1);
+}
+
+/* ============================================================================
+   5. ETIQUETAS Y TÍTULOS DE CATEGORÍAS
+   ============================================================================ */
+.cat-label {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0d6efd;
+  margin: 0;
+  padding-left: 15px;
+  border-left: 3px solid #0d6efd;
+}
+
+.cat-title-text {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #111;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cat-subtitle {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.cat-info {
+  flex: 1;
+}
+
+.btn-view-more {
+  background: transparent;
+  border: none;
+  color: #0d6efd;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+.btn-view-more:hover {
+  color: #0b5ed7;
+}
+
+/* ============================================================================
+   6. SLIDERS DE PRODUCTOS
+   ============================================================================ */
+.category-block {
+  margin-bottom: 3rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.product-slider-mask {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.product-slider-mask::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-track-flex {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+/* Botones de Navegación del Slider */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn:hover {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.nav-btn.prev {
+  left: -20px;
+}
+
+.nav-btn.next {
+  right: -20px;
+}
+
+/* ============================================================================
+   7. ÁREA DE PRODUCTOS
+   ============================================================================ */
+.products-area {
+  width: 100%;
+}
+
+/* ============================================================================
+   8. LOADER / CARGANDO
+   ============================================================================ */
+.dynamic-loader-container {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.loader-bar {
+  width: 120px;
+  height: 3px;
+  background: #eee;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.loader-bar::after {
+  content: '';
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #0d6efd;
+  animation: load 1.5s infinite;
+}
+
+@keyframes load {
+  100% {
+    left: 100%;
+  }
+}
+
+/* ============================================================================
+   9. TRANSICIONES Y ANIMACIONES
+   ============================================================================ */
+.view-switch-enter-active,
+.view-switch-leave-active {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.view-switch-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.view-switch-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* ============================================================================
+   10. RESPONSIVE - TABLETS (768px - 991px)
+   ============================================================================ */
+@media (max-width: 991px) {
+  .nav-btn.prev {
+    left: -10px;
+  }
+  
+  .nav-btn.next {
+    right: -10px;
+  }
+  
+  .cat-title-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================================================================
+   11. RESPONSIVE - MÓVILES (max-width: 767px)
+   ============================================================================ */
+@media (max-width: 767px) {
+  /* Contenedores Bootstrap */
+  .container-fluid {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+  
+  .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Buscador Dinámico */
+  .search-box-dynamic {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .search-box-dynamic input {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+  
+  /* Botones del Header */
+  .icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .cart-icons {
+    gap: 8px;
+  }
+  
+  .user-label {
+    display: none;
+  }
+  
+  .icon-btn-user {
+    padding: 8px 12px;
+  }
+  
+  /* Logo */
+  .logo-image {
+    max-height: 38px;
+  }
+  
+  /* Categorías */
+  .cat-label {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+  
+  .cat-title-text {
+    font-size: 1rem;
+  }
+  
+  .cat-subtitle {
+    font-size: 0.75rem;
+  }
+  
+  .btn-view-more {
+    font-size: 0.8rem;
+  }
+  
+  /* Botón de Regreso */
+  .btn-back-circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Navegación del Slider */
+  .nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.85rem;
+  }
+  
+  .nav-btn.prev {
+    left: 0;
+  }
+  
+  .nav-btn.next {
+    right: 0;
+  }
+  
+  /* Sliders */
+  .slider-track-flex {
+    gap: 12px;
+  }
+  
+  .product-slider-mask {
+    padding: 10px 0;
+  }
+  
+  /* Espaciado */
+  .category-block {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ============================================================================
+   12. RESPONSIVE - MÓVILES PEQUEÑOS (max-width: 480px)
+   ============================================================================ */
+@media (max-width: 480px) {
+  .header-top {
+    padding: 8px 0;
+  }
+  
+  .logo-image {
+    max-height: 35px;
+  }
+  
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .btn-back-circle {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .cat-title-text {
+    font-size: 0.95rem;
+  }
+  
+  .slider-track-flex {
+    gap: 10px;
+  }
+  
+  .nav-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ============================================================================
+   FIN DE ESTILOS
+   ============================================================================ */
